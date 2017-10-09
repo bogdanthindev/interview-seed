@@ -6,6 +6,9 @@
   "license": "MIT",
   "scripts": {
     "start:frontend": "cd frontend && yarn start",
-    "start:backend": "cd backend && yarn start"
+    "start:backend": "cd backend && yarn start",
+    "start:db": "docker run -d -p 27017:27017 --name interview mongo",
+    "stop:db": "docker stop interview",
+    "clean:db": "docker rm -f interview"
   }
 }
